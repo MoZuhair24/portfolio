@@ -5,7 +5,7 @@ export const PROFILE = {
   email: "khanzuhair2004@gmail.com",
   phone: "+91 8819801739",
   linkedin: "https://www.linkedin.com/in/mo-zuhair-159a22249",
-  github: "https://github.com/your-github",
+  github: "https://github.com/MoZuhair24",
   summary:
     "Dedicated Java Developer with hands-on experience in backend development using Java, Spring Boot, and MySQL. Skilled in designing RESTful APIs, implementing real-world projects, and collaborating on team-based development. Committed to writing clean, maintainable code and continuously improving skills through learning and projects.",
   skills: {
