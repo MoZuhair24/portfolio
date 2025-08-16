@@ -17,3 +17,11 @@ html, body {
 .card {
   @apply rounded-2xl bordered bg-white/70 dark:bg-zinc-900/60;
 }
+
+body {
+  @apply bg-gray-50 text-gray-900;
+}
+
+.btn-primary {
+  @apply bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-800 transition;
+}

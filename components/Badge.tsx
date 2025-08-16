@@ -1,7 +1,8 @@
-export default function Badge({ children }: { children: React.ReactNode }) {
+// components/Badge.tsx
+export default function Badge({ text }: { text: string }) {
   return (
-    <span className="inline-flex items-center rounded-full px-3 py-1 text-xs md:text-sm bordered">
-      {children}
+    <span className="px-3 py-1 text-xs font-medium rounded-full bg-teal-700/20 text-teal-400 border border-teal-500/30">
+      {text}
     </span>
   );
 }
