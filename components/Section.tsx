@@ -4,13 +4,17 @@ export default function Section({
   id,
   title,
   children,
-  bg = "bg-white", // default background
+  bg = "bg-black",
 }: {
   id: string;
   title: string;
   children: React.ReactNode;
   bg?: string;
 }) {
+  // decide text color based on bg
+  const isDark = bg.includes("black") || bg.includes("gray") || bg.includes("slate");
+  const textColor = isDark ? "text-white" : "text-gray-900";
+
   return (
     <motion.section
       id={id}
@@ -25,12 +29,12 @@ export default function Section({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 border-b pb-2"
+        className={`text-3xl md:text-4xl font-bold mb-6 border-b pb-2 ${textColor}`}
       >
         {title}
       </motion.h2>
 
-      <div className="text-gray-900 leading-relaxed">{children}</div>
+      <div className={`${textColor} leading-relaxed`}>{children}</div>
     </motion.section>
   );
 }
