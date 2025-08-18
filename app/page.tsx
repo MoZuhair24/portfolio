@@ -4,32 +4,37 @@ import { motion } from "framer-motion";
 import Section from "@/components/Section";
 import { PROFILE } from "@/lib/profile";
 import Card from "@/components/Card";
+import ThemeToggle from "../components/ThemeToggle";
 
 export default function Home() {
   const avatar = "/avatar.jpeg";
 
   return (
-    <main>
-      {/* Header / Nav */}
-      <header className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-black/40 bordered">
-        <div className="max-w-6xl mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
-          <a href="#home" className="font-semibold tracking-tight">
-            {PROFILE.name}
-          </a>
-          <nav className="hidden md:flex gap-6 text-sm">
-            <a href="#about" className="hover:opacity-70">About</a>
-            <a href="#projects" className="hover:opacity-70">Projects</a>
-            <a href="#skills" className="hover:opacity-70">Skills</a>
-            <a href="#experience" className="hover:opacity-70">Experience</a>
-            <a href="#education" className="hover:opacity-70">Education</a>
-            <a href="#certifications" className="hover:opacity-70">Certifications</a>
-            <a href="#contact" className="hover:opacity-70">Contact</a>
-          </nav>
-          <div className="flex items-center gap-3 text-sm">
-            <a href={PROFILE.github} className="underline underline-offset-4 decoration-dotted">GitHub</a>
-            <a href={PROFILE.linkedin} className="underline underline-offset-4 decoration-dotted">LinkedIn</a>
-          </div>
-        </div>
+     // or wherever your toggle is
+
+<main>
+  {/* Header / Nav */}
+  <header className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-black/40 bordered">
+    <div className="max-w-6xl mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
+      <a href="#home" className="font-semibold tracking-tight">
+        {PROFILE.name}
+      </a>
+      <nav className="hidden md:flex gap-6 text-sm">
+        <a href="#about" className="hover:opacity-70">About</a>
+        <a href="#projects" className="hover:opacity-70">Projects</a>
+        <a href="#skills" className="hover:opacity-70">Skills</a>
+        <a href="#experience" className="hover:opacity-70">Experience</a>
+        <a href="#education" className="hover:opacity-70">Education</a>
+        <a href="#certifications" className="hover:opacity-70">Certifications</a>
+        <a href="#contact" className="hover:opacity-70">Contact</a>
+      </nav>
+      <div className="flex items-center gap-3 text-sm">
+        <a href={PROFILE.github} className="underline underline-offset-4 decoration-dotted">GitHub</a>
+        <a href={PROFILE.linkedin} className="underline underline-offset-4 decoration-dotted">LinkedIn</a>
+      <ThemeToggle /> {/* Theme toggle button */}
+      </div>
+    </div>
+
       </header>
 
       {/* Hero */}
